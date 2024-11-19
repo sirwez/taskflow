@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <!-- Firebase App (Core) SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <!-- Firebase Firestore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    #app {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4cae4c;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f9f9f9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    button.delete {
+      background-color: #d9534f;
+      color: white;
+    }
+    button.delete:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>TaskFlow</h1>
+    <form id="taskForm">
+      <input id="taskTitle" type="text" placeholder="Título da tarefa" required>
+      <input id="taskDescription" type="text" placeholder="Descrição da tarefa">
+      <select id="taskCategory">
+        <option value="trabalho">Trabalho</option>
+        <option value="pessoal">Pessoal</option>
+        <option value="urgente">Urgente</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+    <ul id="taskList"></ul>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
