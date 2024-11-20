@@ -69,6 +69,22 @@
     button.delete:hover {
       background-color: #c9302c;
     }
+    button.up, button.down {
+      background-color: #5bc0de;
+      color: white;
+      margin: 0 5px;
+    }
+    button.up:hover, button.down:hover {
+      background-color: #31b0d5;
+    }
+    @media (max-width: 600px) {
+      form {
+        flex-direction: column;
+      }
+      input, select, button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
